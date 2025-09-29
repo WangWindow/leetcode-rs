@@ -1,10 +1,17 @@
 //! 库入口：导出题目模块与通用 `Solution` 结构体
+pub mod problems;
 
 use std::env;
 
-pub mod problems;
+// LeetCode 题解常用占位结构体，便于使用 `impl Solution` 实现静态方法
+pub struct Solution;
 
-pub struct Solution; // LeetCode 题解常用占位结构体，便于使用 `impl Solution` 实现静态方法
+/// 每道题需要实现的统一接口
+pub trait Problem {
+    const ID: &'static str;
+    const TITLE: &'static str;
+    fn run();
+}
 
 /// 按题号运行对应题目的入口：
 /// 用法示例：
@@ -31,7 +38,7 @@ pub fn run() {
 fn print_available() {
     println!("用法: cargo run -- <题号>");
     println!("可用题目:");
-    for (id, _) in problems::REGISTRY {
-        println!("- {id}");
+    for entry in problems::REGISTRY {
+        println!("- {}: {}", entry.id, entry.title);
     }
 }

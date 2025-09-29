@@ -1,11 +1,16 @@
 /// 976. Largest Perimeter Triangle
 /// https://leetcode.com/problems/largest-perimeter-triangle/
-use crate::Solution;
+use crate::{Problem, Solution};
+pub struct Type;
 
-pub fn run() {
-    let nums = vec![2, 1, 2];
-    let perimeter = Solution::largest_perimeter(nums);
-    println!("976 => {}", perimeter);
+impl Problem for Type {
+    const ID: &'static str = "976";
+    const TITLE: &'static str = "最大周长三角形 (Largest Perimeter Triangle)";
+    fn run() {
+        let nums = vec![2, 1, 2];
+        let perimeter = Solution::largest_perimeter(nums);
+        println!("976 => {}", perimeter);
+    }
 }
 
 impl Solution {

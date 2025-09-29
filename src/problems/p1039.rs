@@ -1,11 +1,16 @@
 /// 1039. Minimum Score Triangulation of Polygon
 /// https://leetcode.com/problems/minimum-score-triangulation-of-polygon/
-use crate::Solution;
+use crate::{Problem, Solution};
+pub struct Type;
 
-pub fn run() {
-    let values: Vec<i32> = vec![1, 2, 3];
-    let score = Solution::min_score_triangulation(values);
-    println!("1039 => {}", score);
+impl Problem for Type {
+    const ID: &'static str = "1039";
+    const TITLE: &'static str = "多边形三角剖分的最低得分 (Minimum Score Triangulation of Polygon)";
+    fn run() {
+        let values: Vec<i32> = vec![1, 2, 3];
+        let score = Solution::min_score_triangulation(values);
+        println!("1039 => {}", score);
+    }
 }
 
 impl Solution {
