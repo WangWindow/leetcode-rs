@@ -1,6 +1,5 @@
-//! 812. Largest Triangle Area
-//! https://leetcode.com/problems/largest-triangle-area/
-
+/// 812. Largest Triangle Area
+/// https://leetcode.com/problems/largest-triangle-area/
 use crate::Solution;
 
 pub fn run() {
@@ -10,7 +9,7 @@ pub fn run() {
 }
 
 impl Solution {
-    // 给定点集，求由其中任意三个点组成的三角形的最大面积
+    /// 给定点集，求由其中任意三个点组成的三角形的最大面积
     pub fn largest_triangle_area(points: Vec<Vec<i32>>) -> f64 {
         let n = points.len();
         let mut best = 0f64;

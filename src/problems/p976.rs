@@ -1,6 +1,5 @@
-//! 976. Largest Perimeter Triangle
-//! https://leetcode.com/problems/largest-perimeter-triangle/
-
+/// 976. Largest Perimeter Triangle
+/// https://leetcode.com/problems/largest-perimeter-triangle/
 use crate::Solution;
 
 pub fn run() {
@@ -10,7 +9,7 @@ pub fn run() {
 }
 
 impl Solution {
-    // 给定边长数组，求能组成的最大三角形周长
+    /// 给定边长数组，求能组成的最大三角形周长
     pub fn largest_perimeter(mut nums: Vec<i32>) -> i32 {
         nums.sort_unstable_by(|a, b| b.cmp(a)); // 降序排序
         let n = nums.len();

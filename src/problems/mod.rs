@@ -1,14 +1,7 @@
 //! 题目模块与注册表
-pub mod p812; // 示例：812. Largest Triangle Area
-pub mod p976; // 示例：976. Largest Perimeter Triangle
+// 此文件现在通过 build.rs 自动生成问题模块与注册表。
+// 你只需要在 `src/problems/` 下新增形如 `p{数字}.rs` 的文件，
+// 且在文件中提供 `pub fn run()`，即可被自动收集。
 
-pub static REGISTRY: &[(&str, fn())] = &[
-    ("812", p812::run),
-    ("976", p976::run),
-    // 继续在此追加新的题目映射，例如：("1", p1::run),
-];
-
-/// 根据题号调度对应题目的运行函数
-pub fn dispatch(id: &str) -> Option<fn()> {
-    REGISTRY.iter().find(|(k, _)| k == &id).map(|(_, f)| *f)
-}
+// 将生成的代码包含进来
+include!(concat!(env!("OUT_DIR"), "/problems_registry.rs"));
