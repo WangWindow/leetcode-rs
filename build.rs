@@ -60,9 +60,10 @@ fn main() {
     out.push_str("\n#[allow(dead_code)]\n");
     out.push_str("pub struct ProblemEntry {\n    pub id: &'static str,\n    pub run: fn(),\n    pub title: &'static str,\n}\n\n");
     out.push_str("pub static REGISTRY: &[ProblemEntry] = &[\n");
-    for (_, module_name) in &items {
+    for (id, module_name) in &items {
         out.push_str(&format!(
-            "    ProblemEntry {{ id: <{m}::Type as Problem>::ID, run: <{m}::Type as Problem>::run, title: <{m}::Type as Problem>::TITLE }},\n",
+            "    ProblemEntry {{ id: \"{id}\", run: <{m}::Solution as Problem>::run, title: <{m}::Solution as Problem>::TITLE }},\n",
+            id = id,
             m = module_name
         ));
         // 确保类型可见（如果没被引用，某些配置下可能被优化掉），不过静态引用已足够

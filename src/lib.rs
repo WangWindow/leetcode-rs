@@ -1,14 +1,9 @@
 //! 库入口：导出题目模块与通用 `Solution` 结构体
 pub mod problems;
-
 use std::env;
-
-// LeetCode 题解常用占位结构体，便于使用 `impl Solution` 实现静态方法
-pub struct Solution;
 
 /// 每道题需要实现的统一接口
 pub trait Problem {
-    const ID: &'static str;
     const TITLE: &'static str;
     fn run();
 }

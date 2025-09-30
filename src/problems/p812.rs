@@ -1,10 +1,10 @@
 /// 812. Largest Triangle Area
 /// https://leetcode.com/problems/largest-triangle-area/
-use crate::{Problem, Solution};
-pub struct Type;
+use crate::Problem;
 
-impl Problem for Type {
-    const ID: &'static str = "812";
+pub struct Solution;
+
+impl Problem for Solution {
     const TITLE: &'static str = "最大三角形面积 (Largest Triangle Area)";
     fn run() {
         let points = vec![vec![0, 0], vec![0, 1], vec![1, 0], vec![0, 2], vec![2, 0]];

@@ -1,10 +1,9 @@
 /// 3541. Find Most Frequent Vowel And Consonant
 /// https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/
-use crate::{Problem, Solution};
-pub struct Type;
+use crate::Problem;
+pub struct Solution;
 
-impl Problem for Type {
-    const ID: &'static str = "3541";
+impl Problem for Solution {
     const TITLE: &'static str =
         "找出出现频率最高的元音与辅音 (Find Most Frequent Vowel And Consonant)";
     fn run() {
