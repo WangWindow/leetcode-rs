@@ -1,5 +1,5 @@
-/// 1039. Minimum Score Triangulation of Polygon
-/// https://leetcode.com/problems/minimum-score-triangulation-of-polygon/
+///! 1039. Minimum Score Triangulation of Polygon
+///! https://leetcode.com/problems/minimum-score-triangulation-of-polygon/
 use crate::Problem;
 pub struct Solution;
 

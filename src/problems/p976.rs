@@ -1,5 +1,5 @@
-/// 976. Largest Perimeter Triangle
-/// https://leetcode.com/problems/largest-perimeter-triangle/
+///! 976. Largest Perimeter Triangle
+///! https://leetcode.com/problems/largest-perimeter-triangle/
 use crate::Problem;
 pub struct Solution;
 

@@ -1,5 +1,5 @@
-/// 812. Largest Triangle Area
-/// https://leetcode.com/problems/largest-triangle-area/
+///! 812. Largest Triangle Area
+///! https://leetcode.com/problems/largest-triangle-area/
 use crate::Problem;
 
 pub struct Solution;

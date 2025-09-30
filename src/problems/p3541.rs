@@ -1,5 +1,5 @@
-/// 3541. Find Most Frequent Vowel And Consonant
-/// https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/
+///! 3541. Find Most Frequent Vowel And Consonant
+///! https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/
 use crate::Problem;
 pub struct Solution;
 
