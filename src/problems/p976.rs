@@ -7,8 +7,8 @@ impl Problem for Solution {
     const TITLE: &'static str = "最大周长三角形 (Largest Perimeter Triangle)";
     fn run() {
         let nums = vec![2, 1, 2];
-        let perimeter = Solution::largest_perimeter(nums);
-        println!("976 => {}", perimeter);
+        let result = Solution::largest_perimeter(nums);
+        println!("976 => {}", result);
     }
 }
 

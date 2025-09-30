@@ -8,8 +8,8 @@ impl Problem for Solution {
     const TITLE: &'static str = "最大三角形面积 (Largest Triangle Area)";
     fn run() {
         let points = vec![vec![0, 0], vec![0, 1], vec![1, 0], vec![0, 2], vec![2, 0]];
-        let area = Solution::largest_triangle_area(points);
-        println!("812 => {:.5}", area);
+        let result = Solution::largest_triangle_area(points);
+        println!("812 => {:.5}", result);
     }
 }
 

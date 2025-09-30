@@ -17,7 +17,6 @@ impl Solution {
     pub fn max_freq_sum(s: String) -> i32 {
         // 统计元音字母和辅音字母的频率（暴力法）
         let mut vowel_count = [0; 26];
-
         let mut consonant_count = [0; 26];
         let vowels = "aeiou".chars().collect::<std::collections::HashSet<_>>();
         for ch in s.chars() {
