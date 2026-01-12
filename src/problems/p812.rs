@@ -1,7 +1,6 @@
 ///! 812. Largest Triangle Area
 ///! https://leetcode.com/problems/largest-triangle-area/
 use crate::Problem;
-
 pub struct Solution;
 
 impl Problem for Solution {

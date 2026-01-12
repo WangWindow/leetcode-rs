@@ -2,6 +2,7 @@
 ///! https://leetcode.com/problems/domino-and-tromino-tiling/
 use crate::Problem;
 pub struct Solution;
+
 impl Problem for Solution {
     const TITLE: &'static str = "多米诺和托米诺平铺 (Domino and Tromino Tiling)";
     fn run() {
