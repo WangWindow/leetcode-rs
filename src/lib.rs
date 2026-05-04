@@ -1,39 +1,12 @@
-//! 库入口：导出题目模块与通用 `Solution` 结构体
+//! 库入口：导出题目模块
 pub mod problems;
-use std::env;
 
-/// 每道题需要实现的统一接口
-pub trait Problem {
-    const TITLE: &'static str;
-    fn run();
-}
-
-/// 按题号运行对应题目的入口：
-/// 用法示例：
-/// ```sh
-///   cargo run -- 812
-/// ```
-/// 若不传参数，会列出可用题号。
-pub fn run() {
-    let mut args = env::args().skip(1);
-    if let Some(id) = args.next() {
-        match problems::dispatch(&id) {
-            Some(run) => run(),
-            None => {
-                eprintln!("未找到题号: {id}");
-                print_available();
-            }
-        }
-    } else {
-        print_available();
-    }
-}
-
-/// 打印可用题号和用法说明
-fn print_available() {
-    println!("用法: cargo run -- <题号>");
-    println!("可用题目:");
-    for entry in problems::REGISTRY {
-        println!("- {}: {}", entry.id, entry.title);
-    }
+/// 打印当前题库概览与推荐工作流
+pub fn print_overview() {
+    println!("推荐工作流：");
+    println!("- 使用 ./leetcode-creator add <题号> 抓取并生成新题");
+    println!("- 使用 ./leetcode-creator update <题号> 更新题目头部元数据");
+    println!("- 使用 cargo test 编写和运行单元测试");
+    println!();
+    println!("当前已收录 {} 道题。", problems::IDS.len());
 }

@@ -11,5 +11,5 @@
 */
 
 fn main() {
-    leetcode_rs::run();
+    leetcode_rs::print_overview();
 }

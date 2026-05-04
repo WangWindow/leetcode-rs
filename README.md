@@ -1,25 +1,38 @@
 # LeetCode Rust Solutions
 
-本项目收录了我使用 Rust 语言实现的 LeetCode 算法题解（算是个人刷题记录）。旨在通过高效、简洁的代码，提升算法能力和 Rust 编程水平。
+本项目收录了我使用 Rust 语言实现的 LeetCode 算法题解，作为个人刷题记录与 Rust 练习仓库。
 
 ## 目录
 
-- 题解代码按题号分类存放
-- 每题均包含详细注释，便于理解
+- 题解代码按题号存放在 `src/problems/`，每道题在 `src/problems/p{题号}.rs` 中维护：
+- 每题在文件头使用 rustdoc 注释保存题目元数据与 Markdown 题面
+- 新题可通过 [`leetcode-creator`](https://github.com/WangWindow/leetcode-creator) 一键抓取题面和 Rust 模板并生成样板
 
 ## 如何使用
 
-1. 克隆仓库到本地
+> [!NOTE]
+>
+> `leetcode-creator` 并不是本仓库的依赖，而是一个独立工具，安装和使用步骤如下：
 
-2. 使用 [cargo](https://www.rust-lang.org/tools/install) 运行或测试代码
+1. 安装 `leetcode-creator` 到当前仓库根目录
 
-- 按题号运行对应题目的入口：
+2. 在本仓库根目录生成新题
+
 ```sh
-cargo run -- 812 // 会运行第 812题（附带一个或多个测试用例）
+./leetcode-creator add 1
 ```
-- 若不传参数，会列出可用题号
 
-3. 阅读每题对应的 Rust 实现和解析
+3. 更新已有题目的头部元数据：
+
+```sh
+./leetcode-creator update 1
+```
+
+## 使用 `cargo test` 编写和运行样例
+
+```sh
+cargo test
+```
 
 ## 贡献
 
